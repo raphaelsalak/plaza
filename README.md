@@ -1,5 +1,5 @@
 #User Interface Project - Eccomerce Website
-###Position: Full-Stack
+Position: Full-Stack
 This project was mainly focused on the design aspect of the website.
 #My contribution
 Worked on the javascript logic for the shop features
