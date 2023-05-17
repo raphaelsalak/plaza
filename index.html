@@ -1,0 +1,1000 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		  $(function(){
+		  	$("#navbar").load("navbar.html");
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="assets/css/raphaelstyle.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/group22.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
+	<!--link rel="stylesheet" type="text/css" href="assets/css/nav.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/home.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/root.css"-->
+	<script src="assets/js/plaza.js"></script>
+</head>
+<style>
+#myButton{
+	background-color: #000000;
+	color: #FFFFFF;
+	padding: 10px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	margin:10px;
+	width: 90px;
+	height: 40px;
+
+}
+
+</style>
+	<!--body onload = start()>
+		<div class="nav">
+			<a class="logo" href="plaza-home.html">PL</a>
+			<div class="floor1">
+				<a class="btn" href="#">Sign In</a>
+				<a class="btn" href="#">Join Us</a>
+				<a class="btn" href="#">Help</a>
+				<a class="btn" href="#">Find A Store</a>
+			</div>
+			<div class="floor2">
+				<div class="searchbar">
+					<div class="searchicon"><img src="imgs/search.png"></div>
+					<input class="search" type="text" placeholder="Type To Search ..."></input>
+				</div>
+				<div class="btns">
+					<a class="btn" href="plaza-cart.html"><img src="imgs/shoppingcart.png"></a>
+					<a class="btn" href="#"><img src="imgs/heart.png"></a>
+				</div>
+			</div>
+			<div class="floor3">
+				<div class="categories">
+					<button onclick="categoryDropdown('electronics', 'cElectronics')" class="category" id="cElectronics">Electronics</button>
+					<button onclick="categoryDropdown('fashion', 'cFashion')" class="category" id="cFashion">Fashion</button>
+					<button onclick="categoryDropdown('home', 'cHome')" class="category" id="cHome">Home</button>
+					<button onclick="categoryDropdown('books', 'cBooks')" class="category" id="cBooks">Books</button>
+					<button onclick="categoryDropdown('grocery', 'cGrocery')" class="category" id="cGrocery">Grocery</button>
+					<button onclick="categoryDropdown('pet-supplies', 'cPet')" class="category" id="cPet">Pet Supplies</button>
+					<button onclick="categoryDropdown('beauty-and-health', 'cB&H')" class="category" id="cB&H">Beauty and Health</button>
+					<button onclick="categoryDropdown('outdoors-sports', 'cS&O')" class="category" id="cS&O">Sports & Outdoors</button>
+				</div>
+				<div class="category-dropdown">
+					<div id="electronics">
+						<div class="box">
+							<div class="header">Computers</div>
+							<div class="list">
+								<a class="item" href="#">Laptops</a>
+								<a class="item" href="#">Desktops</a>
+								<a class="item" href="#">Tablets</a>
+								<a class="item" href="#">Monitors</a>
+								<a class="item" href="#">Storage</a>
+								<a class="item" href="#">Speakers</a>
+								<a class="item" href="#">Accessories</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Smartphones</div>
+							<div class="list">
+								<a class="item" href="#">Cellphones</a>
+								<a class="item" href="#">Cases</a>
+								<a class="item" href="#">Chargers</a>
+								<a class="item" href="#">Accessories</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Smart Homes</div>
+							<div class="list">
+								<a class="item" href="#">Lighting</a>
+								<a class="item" href="#">Locks</a>
+								<a class="item" href="#">Security Cameras</a>
+								<a class="item" href="#">Sensors</a>
+								<a class="item" href="#">HVAC</a>
+								<a class="item" href="#">Cleaning</a>
+								<a class="item" href="#">Voice Assistants</a>
+								<a class="item" href="#">Kitchen</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Camera & Video</div>
+							<div class="list">
+								<a class="item" href="#">DSLRs</a>
+								<a class="item" href="#">Lenses</a>
+								<a class="item" href="#">Lighting</a>
+								<a class="item" href="#">Bags & Cases</a>
+								<a class="item" href="#">Tripods & Monopods</a>
+								<a class="item" href="#">Speakers</a>
+								<a class="item" href="#">Accessories</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Wearable Tech</div>
+							<div class="list">
+								<a class="item" href="#">Smartwatches</a>
+								<a class="item" href="#">Wrist & Arm bands</a>
+								<a class="item" href="#">VRs</a>
+								<a class="item" href="#">Activity Trackers</a>
+								<a class="item" href="#">Accessories</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Headphones</div>
+							<div class="list">
+								<a class="item" href="#">Wired</a>
+								<a class="item" href="#">Wireless</a>
+								<a class="item" href="#">Bluetooth</a>
+								<a class="item" href="#">Noise-Cancelling</a>
+								<a class="item" href="#">Waterproof</a>
+								<a class="item" href="#">Speakers</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Car Electronics</div>
+							<div class="list">
+								<a class="item" href="#">Audio</a>
+								<a class="item" href="#">Safety & Security</a>
+								<a class="item" href="#">Cameras</a>
+								<a class="item" href="#">Radios & Scanners</a>
+								<a class="item" href="#">Mounting Kits</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">TV</div>
+							<div class="list">
+								<a class="item" href="#">TVs</a>
+								<a class="item" href="#">Smart TVs</a>
+								<a class="item" href="#">Speakers</a>
+								<a class="item" href="#">Accessories</a>
+							</div>
+						</div>
+					</div>
+					<div id="fashion">
+						<div class="box">
+							<div class="header">Men</div>
+							<div class="list">
+								<a class="item" href="#">T-Shirts</a>
+								<a class="item" href="#">Shirt</a>
+								<a class="item" href="#">Blazers</a>
+								<a class="item" href="#">Suits</a>
+								<a class="item" href="#">Jeans</a>
+								<a class="item" href="#">Trousers</a>
+								<a class="item" href="#">Trackpants</a>
+								<a class="item" href="#">Shorts</a>
+								<a class="item" href="#">Winter</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Women</div>
+							<div class="list">
+								<a class="item" href="#">Tops</a>
+								<a class="item" href="#">Dresses</a>
+								<a class="item" href="#">T-Shirts</a>
+								<a class="item" href="#">Jeans</a>
+								<a class="item" href="#">Trousers</a>
+								<a class="item" href="#">Trackpants</a>
+								<a class="item" href="#">Jumpsuits</a>
+								<a class="item" href="#">Shorts</a>
+								<a class="item" href="#">Winter</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Kids</div>
+							<div class="list">
+								<a class="item" href="#">T-Shirts</a>
+								<a class="item" href="#">Combos</a>
+								<a class="item" href="#">Jeans</a>
+								<a class="item" href="#">Shorts</a>
+								<a class="item" href="#">Trackpants</a>
+								<a class="item" href="#">Nightwear</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Accessories</div>
+							<div class="list">
+								<a class="item" href="#">Watches</a>
+								<a class="item" href="#">Eyewear</a>
+								<a class="item" href="#">Jewelry</a>
+								<a class="item" href="#">Wallets</a>
+								<a class="item" href="#">Belts</a>
+								<a class="item" href="#">Shoes</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Bags</div>
+							<div class="list">
+								<a class="item" href="#">Suitcases</a>
+								<a class="item" href="#">Backpacks</a>
+								<a class="item" href="#">Dufflebags</a>
+								<a class="item" href="#">Handbags</a>
+								<a class="item" href="#">Luggage Bags</a>
+								<a class="item" href="#">Travel Accessories</a>
+							</div>
+						</div>
+					</div>
+					<div id="home">
+						<div class="box">
+							<div class="header">Lighting</div>
+							<div class="list">
+								<a class="item" href="#">Lamps</a>
+								<a class="item" href="#">Decoration</a>
+								<a class="item" href="#">Smart</a>
+								<a class="item" href="#">Bathroom</a>
+								<a class="item" href="#">Outdoor</a>
+								<a class="item" href="#">LED</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Furniture</div>
+							<div class="list">
+								<a class="item" href="#">Tables & Desks</a>
+								<a class="item" href="#">Sofa</a>
+								<a class="item" href="#">Chairs</a>
+								<a class="item" href="#">Beds & Mattresses</a>
+								<a class="item" href="#">Gaming Furniture</a>
+								<a class="item" href="#">Wardrobes</a>
+								<a class="item" href="#">Dresses & Mirrors</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Home Decor</div>
+							<div class="list">
+								<a class="item" href="#">Curtains</a>
+								<a class="item" href="#">Lighting</a>
+								<a class="item" href="#">Paintings</a>
+								<a class="item" href="#">Plants</a>
+								<a class="item" href="#">Wall Decor</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Bathroom</div>
+							<div class="list">
+								<a class="item" href="#">Soaps & Shampoos</a>
+								<a class="item" href="#">Toilet Paper</a>
+								<a class="item" href="#">Towels</a>
+								<a class="item" href="#">Mats</a>
+								<a class="item" href="#">Shower Essentials</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Kitchen</div>
+							<div class="list">
+								<a class="item" href="#">Tables</a>
+								<a class="item" href="#">Chairs</a>
+								<a class="item" href="#">Counter Tops</a>
+								<a class="item" href="#">Plates</a>
+								<a class="item" href="#">Bowls</a>
+								<a class="item" href="#">Pots & Pans</a>
+								<a class="item" href="#">Silverware</a>
+								<a class="item" href="#">Flatware</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Appliances</div>
+							<div class="list">
+								<a class="item" href="#">Washing Machine</a>
+								<a class="item" href="#">Dryers</a>
+								<a class="item" href="#">Fans</a>
+								<a class="item" href="#">Refrigerators</a>
+								<a class="item" href="#">Air Conditioners</a>
+								<a class="item" href="#">Dishwashers</a>
+								<a class="item" href="#">Oven</a>
+							</div>
+						</div>
+					</div>
+					<div id="books">
+						<div class="box">
+							<div class="header">Books at Plaza</div>
+							<div class="list">
+								<a class="item" href="#">Best Sellers</a>
+								<a class="item" href="#">Children's Books</a>
+								<a class="item" href="#">Textbooks</a>
+								<a class="item" href="#">Best of the Month</a>
+								<a class="item" href="#">Best of 2022</a>
+								<a class="item" href="#">Best Books In Top</a>
+								<a class="item" href="#">Categories</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header" style="margin: 0 auto;">Genres</div>
+							<div class="list" style="column-count: 2">
+								<a class="item" href="#">Arts & Photography</a>
+								<a class="item" href="#">Biographies & Memoirs</a>
+								<a class="item" href="#">Business & Money</a>
+								<a class="item" href="#">Calendars</a>
+								<a class="item" href="#">Children's Books</a>
+								<a class="item" href="#">Religious Books</a>
+								<a class="item" href="#">Comics</a>
+								<a class="item" href="#">Technology</a>
+								<a class="item" href="#">Cookbooks</a>
+								<a class="item" href="#">Crafts</a>
+								<a class="item" href="#">Education</a>
+								<a class="item" href="#">Engineering</a>
+								<a class="item" href="#">Health</a>
+								<a class="item" href="#">History</a>
+								<a class="item" href="#">Comedy</a>
+								<a class="item" href="#">LGBTQ+ Books</a>
+								<a class="item" href="#">Non-Fiction</a>
+								<a class="item" href="#">Medical</a>
+								<a class="item" href="#">Mystery</a>
+								<a class="item" href="#">Relationships</a>
+								<a class="item" href="#">Politics</a>
+								<a class="item" href="#">Law</a>
+								<a class="item" href="#">Religion & Spirituality</a>
+								<a class="item" href="#">Romance</a>
+								<a class="item" href="#">Science & Math</a>
+								<a class="item" href="#">Fiction</a>
+								<a class="item" href="#">Selfcare</a>
+								<a class="item" href="#">Sports</a>
+								<a class="item" href="#">Teen & Young Adult</a>
+								<a class="item" href="#">Test Preperation</a>
+								<a class="item" href="#">Travel</a>
+							</div>
+						</div>
+						
+					</div>
+					<div id="grocery">
+						<div class="box">
+							<div class="header">Dairy & Eggs</div>
+							<div class="list">
+								<a class="item" href="#">Eggs</a>
+								<a class="item" href="#">Milk</a>
+								<a class="item" href="#">Flavoured Milk</a>
+								<a class="item" href="#">Cheese</a>
+								<a class="item" href="#">Yogurt</a>
+								<a class="item" href="#">Butter</a>
+								<a class="item" href="#">Soy & Almond Milk</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Snacks & Beverages</div>
+							<div class="list">
+								<a class="item" href="#">Biscuits</a>
+								<a class="item" href="#">Chips & Snacks</a>
+								<a class="item" href="#">Tea</a>
+								<a class="item" href="#">Coffee</a>
+								<a class="item" href="#">Juice</a>
+								<a class="item" href="#">Soft Drinks</a>
+								<a class="item" href="#">Water</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Personal</div>
+							<div class="list">
+								<a class="item" href="#">Soaps & Body Wash</a>
+								<a class="item" href="#">Hair Care</a>
+								<a class="item" href="#">Oral Care</a>
+								<a class="item" href="#">Skin Care</a>
+								<a class="item" href="#">Makeup</a>
+								<a class="item" href="#">Sanitary Needs</a>
+								<a class="item" href="#">Wellness & Pharma</a>
+								<a class="item" href="#">Shaving</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Packaged Foods</div>
+							<div class="list">
+								<a class="item" href="#">Cereals</a>
+								<a class="item" href="#">Pasta</a>
+								<a class="item" href="#">Condiments</a>
+								<a class="item" href="#">Sweets</a>
+								<a class="item" href="#">Ready To Cook</a>
+								<a class="item" href="#">Baking</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Household</div>
+							<div class="list">
+								<a class="item" href="#">Laundry</a>
+								<a class="item" href="#">Cleaners</a>
+								<a class="item" href="#">Repellants</a>
+								<a class="item" href="#">Air Fresheners</a>
+								<a class="item" href="#">Paper & Disposables</a>
+								<a class="item" href="#">Electrical</a>
+								<a class="item" href="#">Pet Food</a>
+								<a class="item" href="#">Shoecare</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Staples</div>
+							<div class="list">
+								<a class="item" href="#">Pulses</a>
+								<a class="item" href="#">Oils</a>
+								<a class="item" href="#">Flours</a>
+								<a class="item" href="#">Spices</a>
+								<a class="item" href="#">Rice</a>
+								<a class="item" href="#">Sugar</a>
+								<a class="item" href="#">Salt</a>
+								<a class="item" href="#">Fruits</a>
+								<a class="item" href="#">Vegetables</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Bakery and Bread</div>
+							<div class="list">
+								<a class="item" href="#">Bread</a>
+								<a class="item" href="#">Cookies</a>
+								<a class="item" href="#">Pastries</a>
+								<a class="item" href="#">Deserts</a>
+								<a class="item" href="#">Tortillas</a>
+								<a class="item" href="#">Cakes</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Baby Care</div>
+							<div class="list">
+								<a class="item" href="#">Diapers & Wipes</a>
+								<a class="item" href="#">Baby Food</a>
+								<a class="item" href="#">Baby Bath</a>
+								<a class="item" href="#">Baby Skin Care</a>
+								<a class="item" href="#">Toys</a>
+								<a class="item" href="#">Clothes</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Frozen Food</div>
+							<div class="list">
+								<a class="item" href="#">Bread & Baked Goods</a>
+								<a class="item" href="#">Fruit</a>
+								<a class="item" href="#">Ice Cream & Treats</a>
+								<a class="item" href="#">Juice & Smoothies</a>
+								<a class="item" href="#">Vegetables</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Home & Kitchen</div>
+							<div class="list">
+								<a class="item" href="#">Storage & Containers</a>
+								<a class="item" href="#">Kitchen Tools</a>
+								<a class="item" href="#">Cookware & Non-Stick</a>
+								<a class="item" href="#">Dining & Cutlery</a>
+								<a class="item" href="#">Stationary & Household Essentials</a>
+								<a class="item" href="#">Storage & Containers</a>
+							</div>
+						</div>
+					</div>
+					<div id="pet-supplies">
+						<div class="box">
+							<div class="header">Pet Food</div>
+							<div class="list">
+								<a class="item" href="#">Dog Food</a>
+								<a class="item" href="#">Cat Food</a>
+								<a class="item" href="#">Hamster Food</a>
+								<a class="item" href="#">Rabbit Food</a>
+								<a class="item" href="#">Bird Feed</a>
+								<a class="item" href="#">Fish Feed</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Pet Accessories</div>
+							<div class="list">
+								<a class="item" href="#">Toys</a>
+								<a class="item" href="#">Collars</a>
+								<a class="item" href="#">Clothes</a>
+								<a class="item" href="#">Cleaners</a>
+								<a class="item" href="#">Hair Trimmers</a>
+								<a class="item" href="#">Nail Clippers</a>
+								<a class="item" href="#">Medicines</a>
+							</div>
+						</div>
+					</div>
+					<div id="beauty-and-health">
+						<div class="box">
+							<div class="header">Beauty</div>
+							<div class="list">
+								<a class="item" href="#">Soaps & Body Wash</a>
+								<a class="item" href="#">Hair Care</a>
+								<a class="item" href="#">Oral Care</a>
+								<a class="item" href="#">Skin Care</a>
+								<a class="item" href="#">Makeup</a>
+								<a class="item" href="#">Sanitary</a>
+								<a class="item" href="#">Wellness</a>
+								<a class="item" href="#">Shaving</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Health</div>
+							<div class="list">
+								<a class="item" href="#">Soaps & Body Wash</a>
+								<a class="item" href="#">Hair Care</a>
+								<a class="item" href="#">Oral Care</a>
+								<a class="item" href="#">Skin Care</a>
+								<a class="item" href="#">Makeup</a>
+								<a class="item" href="#">Sanitary</a>
+								<a class="item" href="#">Wellness</a>
+								<a class="item" href="#">Shaving</a>
+							</div>
+						</div>
+					</div>
+					<div id="outdoors-sports">
+						<div class="box">
+							<div class="header">Sports</div>
+							<div class="list">
+								<a class="item" href="#">Clothing</a>
+								<a class="item" href="#">Jerseys</a>
+								<a class="item" href="#">Gear</a>
+								<a class="item" href="#">Equipment</a>
+								<a class="item" href="#">Collectibles</a>
+							</div>
+						</div>
+						<div class="box">
+							<div class="header">Outdoors</div>
+							<div class="list">
+								<a class="item" href="#">Clothing</a>
+								<a class="item" href="#">Camping</a>
+								<a class="item" href="#">Hiking</a>
+								<a class="item" href="#">Climbing</a>
+								<a class="item" href="#">Cycling</a>
+								<a class="item" href="#">Scooters & Skateboards</a>
+								<a class="item" href="#">Hunting</a>
+								<a class="item" href="#">Fishing</a>
+								<a class="item" href="#">Swimming</a>
+								<a class="item" href="#">Accessories</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="home">
+			<div id="carousel-1" class="carousel">
+				<div class="item">
+					<img src="imgs/waterfall1.png">
+				</div>
+				<div class="item">
+					<img src="imgs/waterfall2.png">
+				</div>
+				<div class="item">
+					<img src="imgs/waterfall3.png">
+				</div>
+				<div class="item">
+					<img src="imgs/rain.jpg">
+				</div>
+				<button class="left" onclick="spinSC('carousel1', 'prev')">❮</button>
+				<button class="right" onclick="spinSC('carousel1', 'next')">❯</button>
+			</div>
+			<div class="offers">
+				<div class="header">Offers</div>
+			</div>
+		</div>
+	</body-->
+<body>
+	<div id="navbar">
+	</div>
+	<div>
+      <link href="assets/css/group22.css" rel="stylesheet" />
+
+      <div class="group22-container">
+        <div class="group22-group22">
+          <div class="group22-homepage">
+            <div class="group22-topprodsdeals">
+              <img
+                src="public/playground_assets/rectangle43871-r52r-400h.png"
+                alt="Rectangle43871"
+                class="group22-rectangle4"
+              />
+              <img
+                src="public/playground_assets/arrowforwardiosrounded23871-vmta.svg"
+                alt="arrowforwardiosrounded23871"
+                class="group22-arrowforwardiosrounded2"
+              />
+              <img
+                src="public/playground_assets/arrowforwardiosrounded13871-jdm9.svg"
+                alt="arrowforwardiosrounded13871"
+                class="group22-arrowforwardiosrounded1"
+              />
+            </div>
+            <div class="group22-offers">
+              <span class="group22-text"><span>Offers:</span></span>
+              <img
+                src="public/playground_assets/rectangle73872-e2lg-1300h.png"
+                alt="Rectangle73872"
+                class="group22-rectangle7"
+              />
+              <span class="group22-text002"><span>SPRING SALE!</span></span>
+              <span class="group22-text004">
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </span>
+              </span>
+              <span class="group22-text006">
+                <span>PICTURES OF PRODUCTS</span>
+              </span>
+              <span class="group22-text008">
+                <span>PICTURES OF PRODUCTS</span>
+              </span>
+            </div>
+            <div class="group22-bestof-month">
+              <img
+                src="public/playground_assets/rectangle43873-6q2s-1600w.png"
+                alt="Rectangle43873"
+                class="group22-rectangle41"
+              />
+              <img
+                src="public/playground_assets/rectangle83873-16a-400w.png"
+                alt="Rectangle83873"
+                class="group22-rectangle8"
+              />
+              <img
+                src="public/playground_assets/rectangle73873-bdso-400w.png"
+                alt="Rectangle73873"
+                class="group22-rectangle71"
+              />
+              <img
+                src="public/playground_assets/rectangle93873-zkt6-500w.png"
+                alt="Rectangle93873"
+                class="group22-rectangle9"
+              />
+              <img
+                src="public/playground_assets/rectangle123873-i2vu-500w.png"
+                alt="Rectangle123873"
+                class="group22-rectangle12"
+              />
+              <img
+                src="public/playground_assets/rectangle113873-ig3-500w.png"
+                alt="Rectangle113873"
+                class="group22-rectangle11"
+              />
+              <img
+                src="public/playground_assets/arrowforwardiosrounded33873-9hpf.svg"
+                alt="arrowforwardiosrounded33873"
+                class="group22-arrowforwardiosrounded3"
+              />
+              <img
+                src="public/playground_assets/arrowforwardiosrounded43873-gkzq.svg"
+                alt="arrowforwardiosrounded43873"
+                class="group22-arrowforwardiosrounded4"
+              />
+              <span class="group22-text010">
+                <span>Best of &lt;Month&gt;:</span>
+              </span>
+            </div>
+            <div class="group22-shop-essentials">
+              <img
+                src="public/playground_assets/rectangle43874-zk2-1800w.png"
+                alt="Rectangle43874"
+                class="group22-rectangle42"
+              />
+              <img
+                src="public/playground_assets/arrowforwardiosrounded33874-cb5b.svg"
+                alt="arrowforwardiosrounded33874"
+                class="group22-arrowforwardiosrounded31"
+              />
+              <img
+                src="public/playground_assets/arrowforwardiosrounded43874-kv6h.svg"
+                alt="arrowforwardiosrounded43874"
+                class="group22-arrowforwardiosrounded41"
+              />
+              <img
+                src="public/playground_assets/rectangle43875-9j8d-300w.png"
+                alt="Rectangle43875"
+                class="group22-rectangle43"
+              />
+              <img
+                src="public/playground_assets/rectangle53875-kxuc-300w.png"
+                alt="Rectangle53875"
+                class="group22-rectangle5"
+              />
+              <img
+                src="public/playground_assets/rectangle63875-139j-300w.png"
+                alt="Rectangle63875"
+                class="group22-rectangle6"
+              />
+              <img
+                src="public/playground_assets/rectangle73875-tsfh-300w.png"
+                alt="Rectangle73875"
+                class="group22-rectangle72"
+              />
+              <span class="group22-text012"><span>Shop Essentials:</span></span>
+            </div>
+            <div class="group22-plaza-membership">
+              <img
+                src="public/playground_assets/rectangle43875-yvwh-1800w.png"
+                alt="Rectangle43875"
+                class="group22-rectangle44"
+              />
+              <img
+                src="public/playground_assets/rectangle113876-grfo-400h.png"
+                alt="Rectangle113876"
+                class="group22-rectangle111"
+              />
+              <img
+                src="public/playground_assets/rectangle133876-wyri-400h.png"
+                alt="Rectangle133876"
+                class="group22-rectangle13"
+              />
+              <img
+                src="public/playground_assets/rectangle123876-f59t-400h.png"
+                alt="Rectangle123876"
+                class="group22-rectangle121"
+              />
+              <span class="group22-text014">
+                <span>Plaza Membership:</span>
+              </span>
+              <span class="group22-text016">
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </span>
+              </span>
+            </div>
+            <img
+              src="public/playground_assets/image13871-e7g5-500h.png"
+              alt="image13871"
+              class="group22-image1"
+            />
+            <img
+              src="public/playground_assets/image33871-t98-500h.png"
+              alt="image33871"
+              class="group22-image3"
+            />
+            <img
+              src="public/playground_assets/image63871-24ne-500h.png"
+              alt="image63871"
+              class="group22-image6"
+            />
+            <img
+              src="public/playground_assets/image23871-4a1f-500h.png"
+              alt="image23871"
+              class="group22-image2"
+            />
+            <img
+              src="public/playground_assets/image43871-892n-500h.png"
+              alt="image43871"
+              class="group22-image4"
+            />
+            <img
+              src="public/playground_assets/image53871-kwb-500h.png"
+              alt="image53871"
+              class="group22-image5"
+            />
+            <div class="group22-dots">
+              <img
+                src="public/playground_assets/ellipse13871-rdu7-200h.png"
+                alt="Ellipse13871"
+                class="group22-ellipse1"
+              />
+              <img
+                src="public/playground_assets/ellipse23871-qlo2-200h.png"
+                alt="Ellipse23871"
+                class="group22-ellipse2"
+              />
+              <img
+                src="public/playground_assets/ellipse33871-e08n-200h.png"
+                alt="Ellipse33871"
+                class="group22-ellipse3"
+              />
+              <img
+                src="public/playground_assets/ellipse43871-a8pu-200h.png"
+                alt="Ellipse43871"
+                class="group22-ellipse4"
+              />
+              <img
+                src="public/playground_assets/ellipse53871-armp-200h.png"
+                alt="Ellipse53871"
+                class="group22-ellipse5"
+              />
+            </div>
+            <div class="group22-group14">
+              <div class="group22-trending">
+                <img
+                  src="public/playground_assets/rectangle43871-u5r-1600w.png"
+                  alt="Rectangle43871"
+                  class="group22-rectangle45"
+                />
+                <img
+                  src="public/playground_assets/arrowforwardiosrounded33871-.svg"
+                  alt="arrowforwardiosrounded33871"
+                  class="group22-arrowforwardiosrounded32"
+                />
+                <img
+                  src="public/playground_assets/arrowforwardiosrounded43871-kw9q.svg"
+                  alt="arrowforwardiosrounded43871"
+                  class="group22-arrowforwardiosrounded42"
+                />
+                <img
+                  src="public/playground_assets/rectangle93871-mzvm-500w.png"
+                  alt="Rectangle93871"
+                  class="group22-rectangle91"
+                />
+                <img
+                  src="public/playground_assets/rectangle123871-tl1w-500w.png"
+                  alt="Rectangle123871"
+                  class="group22-rectangle122"
+                />
+                <img
+                  src="public/playground_assets/rectangle113871-bqus-500w.png"
+                  alt="Rectangle113871"
+                  class="group22-rectangle112"
+                />
+                <span class="group22-text018"><span>Trending:</span></span>
+              </div>
+              <span class="group22-text020"><span>White Plain Tee</span></span>
+              <span class="group22-text022"><span>White Plain Tee</span></span>
+              <span class="group22-text024"><span>White Plain Tee</span></span>
+              <span class="group22-text026"><span>Men’s T-shirts</span></span>
+              <span class="group22-text028"><span>Men’s T-shirts</span></span>
+              <span class="group22-text030"><span>Men’s T-shirts</span></span>
+              <span class="group22-text032"><span>$50.45</span></span>
+              <span class="group22-text034"><span>$50.45</span></span>
+              <span class="group22-text036"><span>$50.45</span></span>
+            </div>
+            <span class="group22-text038"><span>White Plain Tee</span></span>
+            <span class="group22-text040"><span>White Plain Tee</span></span>
+            <span class="group22-text042"><span>White Plain Tee</span></span>
+            <span class="group22-text044"><span>Men’s T-shirts</span></span>
+            <span class="group22-text046"><span>Men’s T-shirts</span></span>
+            <span class="group22-text048"><span>Men’s T-shirts</span></span>
+            <span class="group22-text050"><span>$50.45</span></span>
+            <span class="group22-text052"><span>Nike 5500</span></span>
+            <span class="group22-text054"><span>Nike 5500</span></span>
+            <span class="group22-text056"><span>Nike 5500</span></span>
+            <span class="group22-text058"><span>Nike 5500</span></span>
+            <span class="group22-text060"><span>Men’s shoes</span></span>
+            <span class="group22-text062"><span>Men’s shoes</span></span>
+            <span class="group22-text064"><span>Men’s shoes</span></span>
+            <span class="group22-text066"><span>Men’s shoes</span></span>
+            <span class="group22-text068"><span>$50.45</span></span>
+            <span class="group22-text070"><span>$50.45</span></span>
+            <span class="group22-text072"><span>$50.45</span></span>
+            <span class="group22-text074"><span>$50.45</span></span>
+            <span class="group22-text076"><span>$50.45</span></span>
+            <span class="group22-text078"><span>$50.45</span></span>
+            <span class="group22-text080"><span>Benefit 1</span></span>
+            <span class="group22-text082"><span>Benefit 2</span></span>
+            <span class="group22-text084"><span>Benefit 3</span></span>
+            <span class="group22-text086">
+              <span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt
+              </span>
+            </span>
+            <span class="group22-text088">
+              <span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt
+              </span>
+            </span>
+            <span class="group22-text090">
+              <span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt
+              </span>
+            </span>
+            <div class="group22-baselineaccountcircle1"></div>
+            <img
+              src="public/playground_assets/ellipse63872-75lo-200h.png"
+              alt="Ellipse63872"
+              class="group22-ellipse6"
+            />
+            <span class="group22-text092">1</span>
+            <div class="group22-contactus">
+              <span class="group22-text093"><span>Contact Us</span></span>
+              <span class="group22-text095"><span>News</span></span>
+              <span class="group22-text097">
+                <span>Mission Statement</span>
+              </span>
+              <span class="group22-text099">
+                <span>Call us on 123-456-7890</span>
+              </span>
+              <span class="group22-text101">
+                <span>Email us at email@plaza.com</span>
+              </span>
+              <span class="group22-text103">
+                <span>
+                  <span>Send it by post:</span>
+                  <br />
+                  <span></span>
+                  <br />
+                  <span>John Peace Library,</span>
+                  <br />
+                  <span>1 UTSA Circle,</span>
+                  <br />
+                  <span>San Antonio,</span>
+                  <br />
+                  <span>TX 78249</span>
+                  <br />
+                  <span>United States of America</span>
+                </span>
+              </span>
+              <span class="group22-text118"><span>Careers</span></span>
+              <span class="group22-text120">
+                <span>Investor Information</span>
+              </span>
+              <span class="group22-text122">
+                <span>Terms and Conditions</span>
+              </span>
+              <span class="group22-text124">
+                <span>United States of America</span>
+              </span>
+              <span class="group22-text126"><span>Privacy Policy</span></span>
+              <span class="group22-text128"><span>Purpose</span></span>
+              <span class="group22-text130"><span>About Plaza</span></span>
+              <span class="group22-text132"><span>Return Policy</span></span>
+              <span class="group22-text134"><span>Order Status</span></span>
+              <span class="group22-text136"><span>Payment Options</span></span>
+              <span class="group22-text138"><span>FAQ</span></span>
+              <img
+                src="public/playground_assets/twitter13872-fwq5.svg"
+                alt="twitter13872"
+                class="group22-twitter1"
+              />
+              <img
+                src="public/playground_assets/baselinefacebook13872-fgns.svg"
+                alt="baselinefacebook13872"
+                class="group22-baselinefacebook1"
+              />
+              <img
+                src="public/playground_assets/youtube13872-311f.svg"
+                alt="youtube13872"
+                class="group22-youtube1"
+              />
+              <img
+                src="public/playground_assets/instagramalt13872-8eg.svg"
+                alt="instagramalt13872"
+                class="group22-instagramalt1"
+              />
+              <img
+                src="public/playground_assets/baselinereddit13872-dgct.svg"
+                alt="baselinereddit13872"
+                class="group22-baselinereddit1"
+              />
+              <span class="group22-text140"><span>Promotions</span></span>
+              <span class="group22-text142"><span>Gift Cards</span></span>
+              <span class="group22-text144"><span>Become a Vendor</span></span>
+              <span class="group22-text146"><span>Send us feedback</span></span>
+              <span class="group22-text148">
+                <span>Sign up for newsletter</span>
+              </span>
+              <span class="group22-text150"><span>Become a member</span></span>
+              <span class="group22-text152"><span>Find a Store</span></span>
+              <span class="group22-text154"><span>Help</span></span>
+              <img
+                src="public/playground_assets/locationchip13872-4899.svg"
+                alt="locationchip13872"
+                class="group22-locationchip1"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<!--div id="wrap">
+  		<div id="main">
+			<!-- Corey's code >
+			<div class="home">
+				<div id="carousel-1" class="carousel">
+				<div class="item">
+					<img src="imgs/waterfall1.png">
+				</div>
+				<div class="item">
+					<img src="imgs/waterfall2.png">
+				</div>
+				<div class="item">
+					<img src="imgs/waterfall3.png">
+				</div>
+				<div class="item">
+					<img src="imgs/rain.jpg">
+				</div>
+				<button class="left" onclick="spinSC('carousel1', 'prev')">❮</button>
+				<button class="right" onclick="spinSC('carousel1', 'next')">❯</button>
+				</div>
+				<div class="offers">
+					<div class="header">Offers</div>
+				</div>
+				
+				<!-- Corey's code >
+				
+			</div>
+		</div>
+	</div-->
+</body>
+</html>

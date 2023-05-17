@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<body>
+	  <h1>Shopping Cart</h1>
+	  <div id="cart-items"></div>
+	  <button onclick="clearCart()">clear cart</button>
+	  <button onclick="window.location.href='product.html'">keep shopping</button>
+	  <div id="total"></div>
+	  <button onclick="window.location.href='checkoutPage.html'">checkout</button>
+	</body>
+	<script>
+		const cartItemsDiv = document.querySelector('#cart-items');
+
+		// Retrieve cart data from local storage
+		const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+
+		// Loop through cart items and create HTML elements to display item information
+		// Loop through cart items and create HTML elements to display item information
+		var total = 0;
+		const cartTotal = document.getElementById("total");
+		//const cartTotal = document.createElement('div');
+		if (cartItems && cartItems.length > 0) {
+			cartItems.forEach((item, index) => {
+			const itemDiv = document.createElement('div');
+			const itemName = document.createElement('span');
+			const itemPrice = document.createElement('span');
+			const itemTotal = document.createElement('span');
+			const itemDesc = document.createElement('span');
+			const removeBtn = document.createElement('button');
+			// Set the text and attributes for the remove button
+			removeBtn.textContent = 'Remove';
+			removeBtn.setAttribute('data-index', index);
+
+			// Add an event listener to the remove button
+			removeBtn.addEventListener('click', (event) => {
+			const itemIndex = event.target.getAttribute('data-index');
+				cartItems.splice(itemIndex, 1);
+				localStorage.setItem('cartItems', JSON.stringify(cartItems));
+				location.reload();
+			});
+
+			itemName.textContent = item.name;
+			itemPrice.textContent = '$' + item.price.toFixed(2) + ' ';
+			itemDesc.textContent = 'Desc: ' + item.description;
+
+			total += item.price;
+
+			itemDiv.appendChild(itemName);
+			itemDiv.appendChild(itemPrice);
+			itemDiv.appendChild(itemDesc);
+			itemDiv.appendChild(itemTotal);
+			itemDiv.appendChild(removeBtn);
+
+			cartItemsDiv.appendChild(itemDiv); 
+			});
+		} else {
+	  		cartItemsDiv.textContent = 'Your cart is empty.';
+		}
+		cartTotal.innerHTML = "Total: " + total;
+
+		function clearCart(){
+			localStorage.removeItem('cartItems');
+			location.reload();
+		}
+
+	  </script>
+</html>

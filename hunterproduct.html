@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="productDetails.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Plaza - Product Details</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!--script type="text/javascript">
+   		$(document).ready(function(){
+    	$( "#header" ).load( "../files/header.html" );   
+   		});
+	</script-->
+</head> 
+<body>
+
+<!-----header------->
+	<header>
+		<h1 class="logo">Plaza - Product Details</h1>
+		<ul class="menu-container">
+			<li class="menu-item">Home</li>
+			<li class="menu-item">Products</li>
+			<li class="menu-item">About</li>
+		</ul>
+		<div class="menu-icons-container">
+			<img src="assets/images/search.jpg" alt="" class="icon"> 
+			<img src="assets/images/cart.jpg" alt="" class="icon"> 
+			<img src="assets/images/profile.jpg" alt="" class="icon"> 
+		</div>
+	</header>
+<!-----end header--
+
+<div id="header"></div>
+	<div class="container-fluid p-5">
+		<div class="row mb-3 justify-content-md-center">
+   			<h2>Home / Shoes / Product</h2>
+				<div class="col-sm-4">
+					<img src="assets/images/shoes.jpg" alt="dogimage"  width="600px"  class="float-start d-block rounded" img>
+				</div>
+			<div class="col-sm-8">
+				<h3>Nike 1</h3>
+				<h2>$59.99</h2>
+				<select>
+					<option>Select Size</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+					<option>13</option>
+					<option>14</option>
+				  </select>
+				  <input type="number" value="1">
+				  <a href="" class="button" onclick="addToCart()"></button>Add to Cart</a>
+				  <h3>Product Details</h3>
+				  <p>Give your feet an upgrade with the Nike 1. 
+					It is like walking on a cloud.
+				  </p>
+				  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim </p>
+				<button id="button" onclick="addToCart()">add to cart</button>
+			</div>
+		</div>
+	</div>
+	--->
+
+  <!------- single product details ------->
+
+  <div class="small-container single-product">
+    <div class="row">
+      <div class="col-2">
+		<h2>Home / Shoes</h2>
+        <img src="assets/images/shoes.jpg" alt="dogimage"  width="100%"  class="float-start d-block rounded" img>
+      </div>
+      <div class="col-2">
+        <h1>Nike 1</h1>
+        <h4>$50.99</h4>
+        <select>
+          <option>Select Size</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+		  <option>11</option>
+          <option>12</option>
+          <option>13</option>
+          <option>14</option>
+        </select>
+        <input type="number" value="1">
+        <a href="huntercheckoutpage.html" class="btn" ></button>Add to Cart</a>
+        <h2>Product Details</h2>
+        <p>Give your feet an upgrade with the Nike 1. 
+        Walk on a cloud.
+        </p>
+      </div>
+    </div>
+  </div>	
+
+</body>
+<script>
+//passes the product details data to checkout page so checkout can compute total
+function addToCart() {
+ 
+		const productDetails = getProductDetails(productNameString);
+		// Get the existing cart items from local storage
+		let cartItems = localStorage.getItem('cartItems');
+		cartItems = cartItems ? JSON.parse(cartItems) : [];
+
+		// Add the new product to the cart items array
+		cartItems.push(productDetails);
+
+		// Store the updated cart items in local storage
+		localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+		// Redirect to the shopping cart page
+		window.location.href = 'cart.html';
+}
+</script>
+</html>

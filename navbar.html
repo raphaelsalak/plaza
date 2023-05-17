@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Plaza</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/nav.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/home.css">
+		<script src="assets/js/plaza.js"></script>
+	</head>
+	<body onload = start()>
+		<div class="home">
+			<div class="nav">
+				<a id="logo" href="index.html">PL</a>
+				<div class="floor1">
+					<a id="btn" href="login.html">Sign In</a>
+					<script>
+					if(window.sessionStorage.getItem("userType") == "user"){
+						document.getElementById("btn").innerHTML = '<a id="btn" href="logout.html">logout</a>' + '<a id="btn" href="accountinfo.html">account info</a>';
+					}
+					</script>
+					<a id="btn" href="about.html">Join Us</a>
+					<a id="btn" href="help.html">Help</a>
+					<script>
+						if(window.sessionStorage.getItem("userType") == "admin"){
+							document.getElementById("btn").innerHTML = '<a id="btn" href="adminHome.php">Admin Home</a> ' + '<a id="btn" href="logout.html">logout</a>';
+						}
+					</script>
+				</div>
+				<div class="floor2">
+					<div id="searchbar">
+						<div id="searchicon"><img src="assets/images/search.png"></div>
+						<input id="search" type="text" placeholder="Type To Search ..."></input>
+					</div>
+					<div id="btns">
+						<a id="btn" href="cart.html"><img src="assets/images/shoppingcart.png"></a>
+						<a id="btn" href="#"><img src="assets/images/heart.png"></a>
+					</div>
+				</div>
+				<div class="floor3">
+					<div class="categories">
+						<button onclick="window.location.href='trending.php'" class="category">Trending</button>
+						<button onclick="window.location.href='productshirts.html'" class="category">T-shirts</button>
+						<button onclick="window.location.href='product.html'" class="category">Shoes</button>
+						<button onclick="categoryDropdown('books')" class="category">Books</button>
+						<button onclick="categoryDropdown('grocery')" class="category">Grocery</button>
+						<button onclick="categoryDropdown('pet-supplies')" class="category">Pet Supplies</button>
+						<button onclick="categoryDropdown('beauty-and-health')" class="category">Beauty and Health</button>
+						<button onclick="categoryDropdown('outdoors-sports')" class="category">Sports & Outdoors</button>
+					</div>
+					<div class="category-dropdown">
+						<div id="electronics">
+							<div class="box">
+								<div id="header">Computers</div>
+								<div class="list">
+									<a id="item" href="#">Laptops</a>
+									<a id="item" href="#">Desktops</a>
+									<a id="item" href="#">Tablets</a>
+									<a id="item" href="#">Monitors</a>
+									<a id="item" href="#">Storage</a>
+									<a id="item" href="#">Speakers</a>
+									<a id="item" href="#">Accessories</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Smartphones</div>
+								<div class="list">
+									<a id="item" href="#">Cellphones</a>
+									<a id="item" href="#">Cases</a>
+									<a id="item" href="#">Chargers</a>
+									<a id="item" href="#">Accessories</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Smart Homes</div>
+								<div class="list">
+									<a id="item" href="#">Lighting</a>
+									<a id="item" href="#">Locks</a>
+									<a id="item" href="#">Security Cameras</a>
+									<a id="item" href="#">Sensors</a>
+									<a id="item" href="#">HVAC</a>
+									<a id="item" href="#">Cleaning</a>
+									<a id="item" href="#">Voice Assistants</a>
+									<a id="item" href="#">Kitchen</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Camera & Video</div>
+								<div class="list">
+									<a id="item" href="#">DSLRs</a>
+									<a id="item" href="#">Lenses</a>
+									<a id="item" href="#">Lighting</a>
+									<a id="item" href="#">Bags & Cases</a>
+									<a id="item" href="#">Tripods & Monopods</a>
+									<a id="item" href="#">Speakers</a>
+									<a id="item" href="#">Accessories</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Wearable Tech</div>
+								<div class="list">
+									<a id="item" href="#">Smartwatches</a>
+									<a id="item" href="#">Wrist & Arm bands</a>
+									<a id="item" href="#">VRs</a>
+									<a id="item" href="#">Activity Trackers</a>
+									<a id="item" href="#">Accessories</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Headphones</div>
+								<div class="list">
+									<a id="item" href="#">Wired</a>
+									<a id="item" href="#">Wireless</a>
+									<a id="item" href="#">Bluetooth</a>
+									<a id="item" href="#">Noise-Cancelling</a>
+									<a id="item" href="#">Waterproof</a>
+									<a id="item" href="#">Speakers</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Car Electronics</div>
+								<div class="list">
+									<a id="item" href="#">Audio</a>
+									<a id="item" href="#">Safety & Security</a>
+									<a id="item" href="#">Cameras</a>
+									<a id="item" href="#">Radios & Scanners</a>
+									<a id="item" href="#">Mounting Kits</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">TV</div>
+								<div class="list">
+									<a id="item" href="#">TVs</a>
+									<a id="item" href="#">Smart TVs</a>
+									<a id="item" href="#">Speakers</a>
+									<a id="item" href="#">Accessories</a>
+								</div>
+							</div>
+						</div>
+						<div id="fashion">
+							<div class="box">
+								<div id="header">Men</div>
+								<div class="list">
+									<a id="item" href="#">T-Shirts</a>
+									<a id="item" href="#">Shirt</a>
+									<a id="item" href="#">Blazers</a>
+									<a id="item" href="#">Suits</a>
+									<a id="item" href="#">Jeans</a>
+									<a id="item" href="#">Trousers</a>
+									<a id="item" href="#">Trackpants</a>
+									<a id="item" href="#">Shorts</a>
+									<a id="item" href="#">Winter</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Women</div>
+								<div class="list">
+									<a id="item" href="#">Tops</a>
+									<a id="item" href="#">Dresses</a>
+									<a id="item" href="#">T-Shirts</a>
+									<a id="item" href="#">Jeans</a>
+									<a id="item" href="#">Trousers</a>
+									<a id="item" href="#">Trackpants</a>
+									<a id="item" href="#">Jumpsuits</a>
+									<a id="item" href="#">Shorts</a>
+									<a id="item" href="#">Winter</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Kids</div>
+								<div class="list">
+									<a id="item" href="#">T-Shirts</a>
+									<a id="item" href="#">Combos</a>
+									<a id="item" href="#">Jeans</a>
+									<a id="item" href="#">Shorts</a>
+									<a id="item" href="#">Trackpants</a>
+									<a id="item" href="#">Nightwear</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Accessories</div>
+								<div class="list">
+									<a id="item" href="#">Watches</a>
+									<a id="item" href="#">Eyewear</a>
+									<a id="item" href="#">Jewelry</a>
+									<a id="item" href="#">Wallets</a>
+									<a id="item" href="#">Belts</a>
+									<a id="item" href="#">Shoes</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Bags</div>
+								<div class="list">
+									<a id="item" href="#">Suitcases</a>
+									<a id="item" href="#">Backpacks</a>
+									<a id="item" href="#">Dufflebags</a>
+									<a id="item" href="#">Handbags</a>
+									<a id="item" href="#">Luggage Bags</a>
+									<a id="item" href="#">Travel Accessories</a>
+								</div>
+							</div>
+						</div>
+						<div id="home">
+							<div class="box">
+								<div id="header">Lighting</div>
+								<div class="list">
+									<a id="item" href="#">Lamps</a>
+									<a id="item" href="#">Decoration</a>
+									<a id="item" href="#">Smart</a>
+									<a id="item" href="#">Bathroom</a>
+									<a id="item" href="#">Outdoor</a>
+									<a id="item" href="#">LED</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Furniture</div>
+								<div class="list">
+									<a id="item" href="#">Tables & Desks</a>
+									<a id="item" href="#">Sofa</a>
+									<a id="item" href="#">Chairs</a>
+									<a id="item" href="#">Beds & Mattresses</a>
+									<a id="item" href="#">Gaming Furniture</a>
+									<a id="item" href="#">Wardrobes</a>
+									<a id="item" href="#">Dresses & Mirrors</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Home Decor</div>
+								<div class="list">
+									<a id="item" href="#">Curtains</a>
+									<a id="item" href="#">Lighting</a>
+									<a id="item" href="#">Paintings</a>
+									<a id="item" href="#">Plants</a>
+									<a id="item" href="#">Wall Decor</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Bathroom</div>
+								<div class="list">
+									<a id="item" href="#">Soaps & Shampoos</a>
+									<a id="item" href="#">Toilet Paper</a>
+									<a id="item" href="#">Towels</a>
+									<a id="item" href="#">Mats</a>
+									<a id="item" href="#">Shower Essentials</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Kitchen</div>
+								<div class="list">
+									<a id="item" href="#">Tables</a>
+									<a id="item" href="#">Chairs</a>
+									<a id="item" href="#">Counter Tops</a>
+									<a id="item" href="#">Plates</a>
+									<a id="item" href="#">Bowls</a>
+									<a id="item" href="#">Pots & Pans</a>
+									<a id="item" href="#">Silverware</a>
+									<a id="item" href="#">Flatware</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Appliances</div>
+								<div class="list">
+									<a id="item" href="#">Washing Machine</a>
+									<a id="item" href="#">Dryers</a>
+									<a id="item" href="#">Fans</a>
+									<a id="item" href="#">Refrigerators</a>
+									<a id="item" href="#">Air Conditioners</a>
+									<a id="item" href="#">Dishwashers</a>
+									<a id="item" href="#">Oven</a>
+								</div>
+							</div>
+						</div>
+						<div id="books">
+							<div class="box">
+								<div id="header">Books at Plaza</div>
+								<div class="list">
+									<a id="item" href="#">Best Sellers</a>
+									<a id="item" href="#">Children's Books</a>
+									<a id="item" href="#">Textbooks</a>
+									<a id="item" href="#">Best of the Month</a>
+									<a id="item" href="#">Best of 2022</a>
+									<a id="item" href="#">Best Books In Top</a>
+									<a id="item" href="#">Categories</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header" style="margin: 0 auto;">Genres</div>
+								<div class="list" style="column-count: 2">
+									<a id="item" href="#">Arts & Photography</a>
+									<a id="item" href="#">Biographies & Memoirs</a>
+									<a id="item" href="#">Business & Money</a>
+									<a id="item" href="#">Calendars</a>
+									<a id="item" href="#">Children's Books</a>
+									<a id="item" href="#">Religious Books</a>
+									<a id="item" href="#">Comics</a>
+									<a id="item" href="#">Technology</a>
+									<a id="item" href="#">Cookbooks</a>
+									<a id="item" href="#">Crafts</a>
+									<a id="item" href="#">Education</a>
+									<a id="item" href="#">Engineering</a>
+									<a id="item" href="#">Health</a>
+									<a id="item" href="#">History</a>
+									<a id="item" href="#">Comedy</a>
+									<a id="item" href="#">LGBTQ+ Books</a>
+									<a id="item" href="#">Non-Fiction</a>
+									<a id="item" href="#">Medical</a>
+									<a id="item" href="#">Mystery</a>
+									<a id="item" href="#">Relationships</a>
+									<a id="item" href="#">Politics</a>
+									<a id="item" href="#">Law</a>
+									<a id="item" href="#">Religion & Spirituality</a>
+									<a id="item" href="#">Romance</a>
+									<a id="item" href="#">Science & Math</a>
+									<a id="item" href="#">Fiction</a>
+									<a id="item" href="#">Selfcare</a>
+									<a id="item" href="#">Sports</a>
+									<a id="item" href="#">Teen & Young Adult</a>
+									<a id="item" href="#">Test Preperation</a>
+									<a id="item" href="#">Travel</a>
+								</div>
+							</div>
+							
+						</div>
+						<div id="grocery">
+							<div class="box">
+								<div id="header">Dairy & Eggs</div>
+								<div class="list">
+									<a id="item" href="#">Eggs</a>
+									<a id="item" href="#">Milk</a>
+									<a id="item" href="#">Flavoured Milk</a>
+									<a id="item" href="#">Cheese</a>
+									<a id="item" href="#">Yogurt</a>
+									<a id="item" href="#">Butter</a>
+									<a id="item" href="#">Soy & Almond Milk</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Snacks & Beverages</div>
+								<div class="list">
+									<a id="item" href="#">Biscuits</a>
+									<a id="item" href="#">Chips & Snacks</a>
+									<a id="item" href="#">Tea</a>
+									<a id="item" href="#">Coffee</a>
+									<a id="item" href="#">Juice</a>
+									<a id="item" href="#">Soft Drinks</a>
+									<a id="item" href="#">Water</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Personal</div>
+								<div class="list">
+									<a id="item" href="#">Soaps & Body Wash</a>
+									<a id="item" href="#">Hair Care</a>
+									<a id="item" href="#">Oral Care</a>
+									<a id="item" href="#">Skin Care</a>
+									<a id="item" href="#">Makeup</a>
+									<a id="item" href="#">Sanitary Needs</a>
+									<a id="item" href="#">Wellness & Pharma</a>
+									<a id="item" href="#">Shaving</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Packaged Foods</div>
+								<div class="list">
+									<a id="item" href="#">Cereals</a>
+									<a id="item" href="#">Pasta</a>
+									<a id="item" href="#">Condiments</a>
+									<a id="item" href="#">Sweets</a>
+									<a id="item" href="#">Ready To Cook</a>
+									<a id="item" href="#">Baking</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Household</div>
+								<div class="list">
+									<a id="item" href="#">Laundry</a>
+									<a id="item" href="#">Cleaners</a>
+									<a id="item" href="#">Repellants</a>
+									<a id="item" href="#">Air Fresheners</a>
+									<a id="item" href="#">Paper & Disposables</a>
+									<a id="item" href="#">Electrical</a>
+									<a id="item" href="#">Pet Food</a>
+									<a id="item" href="#">Shoecare</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Staples</div>
+								<div class="list">
+									<a id="item" href="#">Pulses</a>
+									<a id="item" href="#">Oils</a>
+									<a id="item" href="#">Flours</a>
+									<a id="item" href="#">Spices</a>
+									<a id="item" href="#">Rice</a>
+									<a id="item" href="#">Sugar</a>
+									<a id="item" href="#">Salt</a>
+									<a id="item" href="#">Fruits</a>
+									<a id="item" href="#">Vegetables</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Bakery and Bread</div>
+								<div class="list">
+									<a id="item" href="#">Bread</a>
+									<a id="item" href="#">Cookies</a>
+									<a id="item" href="#">Pastries</a>
+									<a id="item" href="#">Deserts</a>
+									<a id="item" href="#">Tortillas</a>
+									<a id="item" href="#">Cakes</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Baby Care</div>
+								<div class="list">
+									<a id="item" href="#">Diapers & Wipes</a>
+									<a id="item" href="#">Baby Food</a>
+									<a id="item" href="#">Baby Bath</a>
+									<a id="item" href="#">Baby Skin Care</a>
+									<a id="item" href="#">Toys</a>
+									<a id="item" href="#">Clothes</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Frozen Food</div>
+								<div class="list">
+									<a id="item" href="#">Bread & Baked Goods</a>
+									<a id="item" href="#">Fruit</a>
+									<a id="item" href="#">Ice Cream & Treats</a>
+									<a id="item" href="#">Juice & Smoothies</a>
+									<a id="item" href="#">Vegetables</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Home & Kitchen</div>
+								<div class="list">
+									<a id="item" href="#">Storage & Containers</a>
+									<a id="item" href="#">Kitchen Tools</a>
+									<a id="item" href="#">Cookware & Non-Stick</a>
+									<a id="item" href="#">Dining & Cutlery</a>
+									<a id="item" href="#">Stationary & Household Essentials</a>
+									<a id="item" href="#">Storage & Containers</a>
+								</div>
+							</div>
+						</div>
+						<div id="pet-supplies">
+							<div class="box">
+								<div id="header">Pet Food</div>
+								<div class="list">
+									<a id="item" href="#">Dog Food</a>
+									<a id="item" href="#">Cat Food</a>
+									<a id="item" href="#">Hamster Food</a>
+									<a id="item" href="#">Rabbit Food</a>
+									<a id="item" href="#">Bird Feed</a>
+									<a id="item" href="#">Fish Feed</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Pet Accessories</div>
+								<div class="list">
+									<a id="item" href="#">Toys</a>
+									<a id="item" href="#">Collars</a>
+									<a id="item" href="#">Clothes</a>
+									<a id="item" href="#">Cleaners</a>
+									<a id="item" href="#">Hair Trimmers</a>
+									<a id="item" href="#">Nail Clippers</a>
+									<a id="item" href="#">Medicines</a>
+								</div>
+							</div>
+						</div>
+						<div id="beauty-and-health">
+							<div class="box">
+								<div id="header">Beauty</div>
+								<div class="list">
+									<a id="item" href="#">Soaps & Body Wash</a>
+									<a id="item" href="#">Hair Care</a>
+									<a id="item" href="#">Oral Care</a>
+									<a id="item" href="#">Skin Care</a>
+									<a id="item" href="#">Makeup</a>
+									<a id="item" href="#">Sanitary</a>
+									<a id="item" href="#">Wellness</a>
+									<a id="item" href="#">Shaving</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Health</div>
+								<div class="list">
+									<a id="item" href="#">Soaps & Body Wash</a>
+									<a id="item" href="#">Hair Care</a>
+									<a id="item" href="#">Oral Care</a>
+									<a id="item" href="#">Skin Care</a>
+									<a id="item" href="#">Makeup</a>
+									<a id="item" href="#">Sanitary</a>
+									<a id="item" href="#">Wellness</a>
+									<a id="item" href="#">Shaving</a>
+								</div>
+							</div>
+						</div>
+						<div id="outdoors-sports">
+							<div class="box">
+								<div id="header">Sports</div>
+								<div class="list">
+									<a id="item" href="#">Clothing</a>
+									<a id="item" href="#">Jerseys</a>
+									<a id="item" href="#">Gear</a>
+									<a id="item" href="#">Equipment</a>
+									<a id="item" href="#">Collectibles</a>
+								</div>
+							</div>
+							<div class="box">
+								<div id="header">Outdoors</div>
+								<div class="list">
+									<a id="item" href="#">Clothing</a>
+									<a id="item" href="#">Camping</a>
+									<a id="item" href="#">Hiking</a>
+									<a id="item" href="#">Climbing</a>
+									<a id="item" href="#">Cycling</a>
+									<a id="item" href="#">Scooters & Skateboards</a>
+									<a id="item" href="#">Hunting</a>
+									<a id="item" href="#">Fishing</a>
+									<a id="item" href="#">Swimming</a>
+									<a id="item" href="#">Accessories</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

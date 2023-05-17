@@ -1,0 +1,145 @@
+/* CSS Document */
+
+header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #f2f2f2;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    z-index: 15;
+
+}
+.logo{
+    font-size: 32px;
+    font-weight: 800;
+
+}
+
+.menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.menu-item{
+    margin: 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 26px;
+
+}
+
+.red{
+    color: rgb(167, 33, 10);
+
+}
+
+.menu-icons-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 200px;
+}
+
+.icon{
+    filter: invert(1);
+    height: 40px;
+    margin: 1rem;
+    color: white;
+    z-index: 10;
+}
+
+.containter{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-2{
+    min-width: 300px;
+    align-self: auto;
+    top: 100px;
+}
+
+.col-2 img{
+    max-width: 60%;
+    padding: 50px 0;
+}
+
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.btn{
+    display: inline-block;
+    background: rgb(0, 132, 255);
+    background-color: rgb(0, 132, 255);
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 5px;
+    z-index: 10;
+
+}
+
+.single-product{
+    margin-top: 80px;
+}
+.single-product .col-2 img{
+    padding: 0;
+}
+.single-product .col-2{
+    padding: 20px;
+}
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+.single-product select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+.single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid gray;
+}
+input:focus{
+    outline: none;
+}
+
+input[type="button"]{
+    background-color: rgb(0, 132, 255);
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    height: 50px;
+    padding: 0 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+}

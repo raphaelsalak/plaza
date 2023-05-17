@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Plaza | Shoes</title>
+
+	<!-- Site Icon -->
+	<link rel="shortcut Icon" type="image/png" href="img/favicon.png">
+
+	<!-- Font Awesome Icons -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Google Fonts -->
+	<!--<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<!-- Custom CSS -->
+	<link href="assets/css/parthstyle.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		  $(function(){
+		  	$("#navbar").load("navbar.html");
+		});
+	</script>
+
+</head>
+<body>
+	<div id="navbar"></div>
+	<div class="page-section masthead2" style="font-family: 'Inter',sans-serif;">
+		<div class="container h-50">
+				<h1 style="color: black; text-align: center;"> Shoes </h1>
+				<input type="text" id="search-input">
+				<button onclick="search()">Search</button>
+				<ul id="results-list"></ul>
+		</div>
+	</div>
+
+	<section class="page-section" style="font-family: 'Inter',sans-serif;">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-3 blog-form">
+					<h2 class="blog-sidebar-title"><b>Accessories</b></h2>
+					<hr />
+					<!--<p class="blog-sidebar-text">No products in the cart...</p>-->
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Shoes</b></p>
+					<p class="blog-sidebar-text"><b><span class="list-icon"> > </span> Watches</b></p>
+					<p class="blog-sidebar-text"><b><span class="list-icon"> > </span> Sunglasses</b></p>
+					<p class="blog-sidebar-text"><b><span class="list-icon"> > </span> Jewellery</b></p>
+					<p class="blog-sidebar-text"><b><span class="list-icon"> > </span> Belts</b></p>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<h2 class="blog-sidebar-title"><b>Categories</b></h2>
+					<hr />
+					
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Brands</b></p>
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Gender</b></p>
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Price</b></p>
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Color</b></p>
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Size</b></p>
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Features</b></p>
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Occasion</b></p>
+
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<button type="button" class="btn btn-dark btn-lg">Filter</button>
+
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+
+				</div>
+				<!--END  <div class="col-lg-3 blog-form">-->
+
+				<div class="col-lg-9" style="padding-left: 30px;">
+					<div class="row">
+						<div class="col" style="font-weight: 800;">
+							Showing all 30 results
+						</div>
+
+						<div class="col">
+							<select class="form-control">
+								<option value="">Featured Products</option>
+								<option value="popularity">Sorted by popularity</option>
+								<option value="average">Sorted by average</option>
+								<option value="latest">Sorted by latest</option>
+								<option value="low">Sorted by low price</option> 
+								<option value="high">Sorted by high price</option>
+							</select>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike1</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="hunterproduct.html" target="_blank" class="btn btn-success button-text" id="product-1-btn" ><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Jordan2</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" onclick="showProductDetails('Jordan2')"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">PG3</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" onclick="showProductDetails('PG3')"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike3</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike2</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Jordan3</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike4</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">PG4</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike5</p>
+									<p class="card-text" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+                    <div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Jordan6</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" id="product-1-btn" onclick="showProductDetails(1)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike7</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" onclick="showProductDetails(2)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">PG5</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" onclick="showProductDetails(3)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike8</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Jordan9</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike10</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">PG6</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike11</p>
+
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Jordan12</p>
+									<p class="card-text" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+                    <div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike13</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" id="product-1-btn" onclick="showProductDetails(1)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">PG7</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" onclick="showProductDetails(2)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike14</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" onclick="showProductDetails(3)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Jordan15</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike16</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">PG8</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike17</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Jordan18</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike19</p>
+									<p class="card-text" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+                    <div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">PG9</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" id="product-1-btn" onclick="showProductDetails(1)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike20</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" onclick="showProductDetails(2)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">PG10</p>
+									<p class="card-text small" style="text-align: left;">Women's basketball shoes designed for extreme comfort</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" onclick="showProductDetails(3)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div>&nbsp;</div>
+	<div>&nbsp;</div>
+	<div>&nbsp;</div>
+	<script>
+	   const users = [
+        { name: "Nike1", },
+        { name: "Jordan2" },
+        { name: "Nike3" },
+        { name: "PG3" },
+
+        { name: "Nike2", },
+        { name: "Jordan3" },
+        { name: "Nike4" },
+        { name: "PG4" },
+
+        { name: "Nike5", },
+        { name: "Jordan6" },
+        { name: "Nike7" },
+        { name: "PG5" },
+
+        { name: "Nike8", },
+        { name: "Jordan9" },
+        { name: "Nike10" },
+        { name: "PG6" },
+
+        { name: "Nike11", },
+        { name: "Jordan12" },
+        { name: "Nike13" },
+        { name: "PG7" },
+
+        { name: "Nike14", },
+        { name: "Jordan15" },
+        { name: "Nike16" },
+        { name: "PG8" },
+
+        { name: "Nike17", },
+        { name: "Jordan18" },
+        { name: "Nike19" },
+        { name: "PG9" },
+
+        { name: "Nike20", },
+        { name: "PG10" }
+      ];
+
+      function searchUsers(users, searchTerm) {
+        return users.filter(user => {
+          return user.name.toLowerCase().includes(searchTerm.toLowerCase());//the function is user.name.tolowercase.includes, the current value is searchterm.tolowercase
+        });
+      }
+
+      function search() {
+        const searchTerm = document.getElementById("search-input").value;
+        const results = searchUsers(users, searchTerm);
+
+        const resultsList = document.getElementById("results-list");
+        resultsList.innerHTML = "";
+
+        results.forEach(result => {
+          const div = document.createElement("a");
+		  const br = document.createElement("br");
+          div.textContent = result.name;
+		  div.setAttribute("href", `hunterproduct.html?name=${result.name}`);
+          resultsList.appendChild(div);
+		  resultsList.appendChild(br);
+        });
+      }
+      function showProductDetails(name) {
+        window.location.href = `productdetails.html?name=${name}`;
+      }
+    </script>
+</body>
+</html>

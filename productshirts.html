@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Plaza | T-shirts</title>
+
+	<!-- Site Icon -->
+	<link rel="shortcut Icon" type="image/png" href="img/favicon.png">
+
+	<!-- Font Awesome Icons -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Google Fonts -->
+	<!--<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<!-- Custom CSS -->
+	<link href="assets/css/parthstyle.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		  $(function(){
+		  	$("#navbar").load("navbar.html");
+		});
+	</script>
+
+</head>
+<body>
+	<div id="navbar"></div>
+	<div class="page-section masthead2" style="font-family: 'Inter',sans-serif;">
+		<div class="container h-50">
+				<h1 style="color: black; text-align: center;"> T-shirts </h1>
+				<input type="text" id="search-input">
+				<button onclick="search()">Search</button>
+				<ul id="results-list"></ul>
+		</div>
+	</div>
+
+	<section class="page-section" style="font-family: 'Inter',sans-serif;">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-3 blog-form">
+					<h2 class="blog-sidebar-title"><b>Men's Fashion</b></h2>
+					<hr />
+					<!--<p class="blog-sidebar-text">No products in the cart...</p>-->
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span>T-shirts</b></p>
+					<p class="blog-sidebar-text"><b><span class="list-icon"> > </span>Shirts</b></p>
+					<p class="blog-sidebar-text"><b><span class="list-icon"> > </span>Blazers</b></p>
+					<p class="blog-sidebar-text"><b><span class="list-icon"> > </span>Suits</b></p>
+					<p class="blog-sidebar-text"><b><span class="list-icon"> > </span>Jeans</b></p>
+					<p class="blog-sidebar-text"><b><span class="list-icon"> > </span>Trousers</b></p>
+					<p class="blog-sidebar-text"><b><span class="list-icon"> > </span>Trackpants</b></p>
+					<p class="blog-sidebar-text"><b><span class="list-icon"> > </span>Shorts</b></p>
+					<p class="blog-sidebar-text"><b><span class="list-icon"> > </span>Winter</b></p>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<h2 class="blog-sidebar-title"><b>Categories</b></h2>
+					<hr />
+					
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Brands</b></p>
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Material</b></p>
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Price</b></p>
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Color</b></p>
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Size</b></p>
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Features</b></p>
+					<p class="blog-sidebar-list"><b><span class="list-icon"> > </span> Occasion</b></p>
+
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<button type="button" class="btn btn-dark btn-lg">Filter</button>
+
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+
+				</div>
+				<!--END  <div class="col-lg-3 blog-form">-->
+
+				<div class="col-lg-9" style="padding-left: 30px;">
+					<div class="row">
+						<div class="col" style="font-weight: 800;">
+							Showing all 30 results
+						</div>
+
+						<div class="col">
+							<select class="form-control">
+								<option value="">Featured Products</option>
+								<option value="popularity">Sorted by popularity</option>
+								<option value="average">Sorted by average</option>
+								<option value="latest">Sorted by latest</option>
+								<option value="low">Sorted by low price</option> 
+								<option value="high">Sorted by high price</option>
+							</select>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike Plain T-shirt 1</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" id="product-1-btn" onclick="showProductDetails(1)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Reebok Printed T-shirt 2</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" onclick="showProductDetails(2)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Puma Nylon T-shirt 3</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" onclick="showProductDetails(3)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike Plain T-shirt 4</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Reebok Printed T-shirt 5</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Puma Nylon T-shirt 6</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike Plain T-shirt 7</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Reebok Printed T-shirt 8</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Puma Nylon T-shirt 9</p>
+									<p class="card-text" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+                    <div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Jordan6</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" id="product-1-btn" onclick="showProductDetails(1)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike7</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" onclick="showProductDetails(2)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">PG5</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" onclick="showProductDetails(3)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike8</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Jordan9</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike10</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">PG6</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike11</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Jordan12</p>
+									<p class="card-text" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+                    <div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike13</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" id="product-1-btn" onclick="showProductDetails(1)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">PG7</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" onclick="showProductDetails(2)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike14</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" onclick="showProductDetails(3)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Jordan15</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike16</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">PG8</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+
+					<div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike17</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Jordan18</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike19</p>
+									<p class="card-text" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+                    <div class="row">
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">PG9</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" id="product-1-btn" onclick="showProductDetails(1)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">Nike20</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" onclick="showProductDetails(2)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-3 col-md-6 col-lg-4">
+							<div class="card">
+								<div class="card-body text-center">
+									<img src="assets/images/coffee_item7.jpg" class="product-image">
+									<h5 class="card-title" style="text-align: left; color: bl; color: black;"><b>$50.99</b></h5>
+									<p class="tags" style="text-align: left;">PG10</p>
+									<p class="card-text small" style="text-align: left;">Men's T-shirt designed for extreme comfort and soft materials</p>
+									
+									<a href="#" target="_blank" class="btn btn-success button-text" onclick="showProductDetails(3)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Sorting by <div class="row"> -->
+
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div>&nbsp;</div>
+	<div>&nbsp;</div>
+	<div>&nbsp;</div>
+	<script>
+	   const users = [
+        { name: "Nike Plain T-shirt 1", },
+		{ name: "Reebok Printed T-shirt 2"},
+		{ name: "Puma Nylon T-shirt 3" },
+
+		{ name: "Nike Plain T-shirt 4", },
+		{ name: "Reebok Printed T-shirt 5" },
+		{ name: "Puma Nylon T-shirt 6" },
+
+		{ name: "Nike Plain T-shirt 7", },
+		{ name: "Reebok Printed T-shirt 8" },
+		{ name: "Puma Nylon T-shirt 9"},
+
+		{ name: "Nike Plain T-shirt 10", },
+		{ name: "Reebok Printed T-shirt 11" },
+		{ name: "Puma Nylon T-shirt 12" },
+
+		{ name: "Nike Plain T-shirt 13", },
+		{ name: "Reebok Printed T-shirt 14"},
+		{ name: "Puma Nylon T-shirt 15" },
+
+		{ name: "Nike Plain T-shirt 16", },
+		{ name: "Reebok Printed T-shirt 17" },
+		{ name: "Puma Nylon T-shirt 18" },
+
+		{ name: "Nike Plain T-shirt 19", },
+		{ name: "Reebok Printed T-shirt 20" },
+		{ name: "Puma Nylon T-shirt 21" },
+
+		{ name: "Nike Plain T-shirt 22", },
+		{ name: "Reebok Printed T-shirt 23" },
+		{ name: "Puma Nylon T-shirt 24", },
+
+		{ name: "Nike Plain T-shirt 25", },
+		{ name: "Reebok Printed T-shirt 26" },
+		{ name: "Puma Nylon T-shirt 27", },
+
+		{ name: "Nike Plain T-shirt 28", },
+		{ name: "Reebok Printed T-shirt 29" },
+		{ name: "Puma Nylon T-shirt 30" }
+        
+      ];
+
+      function searchUsers(users, searchTerm) {
+        return users.filter(user => {
+          return user.name.toLowerCase().includes(searchTerm.toLowerCase());//the function is user.name.tolowercase.includes, the current value is searchterm.tolowercase
+        });
+      }
+
+      function search() {
+        const searchTerm = document.getElementById("search-input").value;
+        const results = searchUsers(users, searchTerm);
+
+        const resultsList = document.getElementById("results-list");
+        resultsList.innerHTML = "";
+
+        results.forEach(result => {
+          const div = document.createElement("a");
+		  const br = document.createElement("br");
+          div.textContent = result.name;
+		  div.setAttribute("href", `productdetails.html?name=${result.name}`);
+          resultsList.appendChild(div);
+		  resultsList.appendChild(br);
+        });
+      }
+      function showProductDetails(productId) {
+        window.location.href = `productdetails.html?id=${productId}`;
+      }
+    </script>
+</body>
+</html>
