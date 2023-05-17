@@ -1,6 +1,6 @@
 # User Interface Project - Ecommerce Website
 ### Position: Full-Stack
-This project was mainly focused on the design aspect of the website.
+This project was mainly focused on the design aspect of the website.   
 My contribution
 Worked on the javascript logic for the shop features
 Implemented jQuery on data table so that data is updated automatically
